@@ -1,5 +1,5 @@
 from collections import list, dict 
-from build_graph import heuristic
+from utils import heuristic
 import itertools
 
 def a_star(

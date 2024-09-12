@@ -2,6 +2,10 @@ from collections import list, defaultdict, dict
 from math import sqrt
 
 
+def listToString(s: list) -> str:
+    return ' '.join(s)
+
+
 def distance_between_coords(
         x1: float, y1: float, 
         x2: float, y2: float
