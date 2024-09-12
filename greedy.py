@@ -1,6 +1,6 @@
-from collections import list 
+from collections import dict 
 
-def greedy(nodes: list, edges: list, start: list) -> tuple:
+def greedy(nodes: list, edges: dict, start: list) -> tuple:
     '''
     Build the function using Greedy algorithm to find the
     shortest path over all nodes from start node.

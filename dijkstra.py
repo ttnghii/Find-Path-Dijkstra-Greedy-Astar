@@ -1,6 +1,6 @@
-from collections import list
+from collections import list, dict 
 
-def dijkstra(nodes: list, edges: list, start: list) -> tuple:
+def dijkstra(nodes: list, edges: dict, start: list) -> tuple:
     
     '''
     Returns a path to all nodes with least weight 
