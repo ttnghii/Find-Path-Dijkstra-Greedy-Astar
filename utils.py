@@ -1,4 +1,4 @@
-from collections import list, defaultdict, dict
+from collections import defaultdict
 from math import sqrt
 
 

@@ -1,5 +1,3 @@
-from collections import list, dict 
-
 def dijkstra(nodes: list, edges: dict, start: list) -> tuple:
     
     '''
