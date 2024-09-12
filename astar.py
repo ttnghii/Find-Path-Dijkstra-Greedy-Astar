@@ -1,5 +1,6 @@
 from collections import list, dict 
 from build_graph import heuristic
+import itertools
 
 def a_star(
         nodes: list, 
@@ -50,3 +51,37 @@ def a_star(
                                                   nodes[goal - 1])
             
         return None, float('inf')
+    
+
+def shortest_path(coords: list, graph: dict, edges: dict):
+    
+    shortest_path_taken, shortest_path_weight = None, float('inf')
+    nodes = [node[2] for node in coords]
+
+    for perm in itertools.permutations(nodes):
+        
+        current_path, current_weight = [], 0
+        valid_path = True
+
+        for i in range(len(perm) - 1):
+            path, weight = a_star(
+                coords=coords,
+                graph=graph,
+                edges=edges,
+                start=perm[i],
+                goal=perm[i + 1]
+            )
+            if not path:
+                valid_path = False
+                break
+            current_path.extend(path[:-1])
+            current_path += weight
+
+        if valid_path:
+            current_path.append(perm[-1])
+
+        if valid_path and current_weight < shortest_path_weight:
+            shortest_path_weight = current_weight
+            shortest_path_taken = current_path
+
+        return shortest_path_taken, shortest_path_weight
