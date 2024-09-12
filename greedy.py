@@ -1,4 +1,4 @@
-def greedy(nodes: list, edges: dict, start: list) -> tuple:
+def greedy_path(nodes: list, edges: dict, start: list) -> tuple:
     '''
     Build the function using Greedy algorithm to find the
     shortest path over all nodes from start node.

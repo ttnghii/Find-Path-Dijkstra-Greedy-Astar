@@ -1,6 +1,6 @@
 from utils import heuristic
 
-def a_star(
+def a_star_path(
         nodes: list, 
         graph: dict, edges: dict, 
         start: list, goal: list

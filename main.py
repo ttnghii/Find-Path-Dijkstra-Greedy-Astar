@@ -1,7 +1,7 @@
 from utils import graph
-from dijkstra import dijkstra
-from greedy import greedy
-from astar import astar
+from dijkstra import dijkstra_path
+from greedy import greedy_path
+from astar import a_star_path
 import itertools
 
 GPS = [
@@ -25,11 +25,11 @@ def shortest_path(
     ) -> None:
     
     if algorithm == 'dijkstra':
-        model = dijkstra()
+        model = dijkstra_path()
     elif algorithm == 'greedy':
-        model = greedy()
+        model = greedy_path()
     elif algorithm == 'astar':
-        model == astar()
+        model == a_star_path()
 
     shortest_path_taken, shortest_path_weight = None, float('inf')
     nodes = [node[2] for node in coords]

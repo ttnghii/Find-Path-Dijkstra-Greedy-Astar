@@ -1,4 +1,4 @@
-def dijkstra(nodes: list, edges: dict, start: list) -> tuple:
+def dijkstra_path(nodes: list, edges: dict, start: list) -> tuple:
     
     '''
     Returns a path to all nodes with least weight 
