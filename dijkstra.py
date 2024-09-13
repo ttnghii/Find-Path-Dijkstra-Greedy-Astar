@@ -1,5 +1,4 @@
 def dijkstra_path(coords: dict, edges: dict, start: list) -> tuple:
-    
     '''
     Returns a path to all nodes with least weight 
     as a list of names from a specific node

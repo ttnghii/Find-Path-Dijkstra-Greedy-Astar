@@ -18,3 +18,5 @@ def greedy_path(coords: dict, edges: dict, start: list) -> tuple:
         current_node = nearest_neighbor
         visited.append(nearest_neighbor)
         unvisited.remove(nearest_neighbor)
+
+    return visited, total_weight

@@ -6,14 +6,13 @@ def listToString(s: list) -> str:
     return ' '.join(s)
 
 
-def distance_between_coords(
-        x1: float, y1: float, 
-        x2: float, y2: float
-        ) -> float:
+def distance_between_coords(node1: list, node2: list) -> float:
     '''
     Return the distance between 2 input coords A(x1, y1) and B(x2, y2)
     by using Euclid distance.
     '''
+    x1, y1 = node1[:2]
+    x2, y2 = node2[:2]
     return sqrt( ((x2 - x1) ** 2) + ((y2 - y1) ** 2) )
 
 
@@ -28,7 +27,7 @@ def name_coords(coords: list) -> list:
     return coords
 
 
-def graph(coords: list, algorithm: str = None):
+def graph(coords: dict, algorithm: str = None):
     '''
     Create weighted and undirected graph
     Returns:
@@ -50,10 +49,10 @@ def graph(coords: list, algorithm: str = None):
                 graphs[current[2]].append(comparer[2]) 
                 edges[current[2], comparer[2]] = weight 
     
-    if algorithm == 'Astar':
-        return coords, graphs, edges
+    if algorithm == 'astar':
+        return graphs, edges
     else:
-        return coords, edges
+        return edges
     
 
 def heuristic(node1: list, node2: list) -> float:
