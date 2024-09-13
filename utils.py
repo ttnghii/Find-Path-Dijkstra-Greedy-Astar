@@ -38,7 +38,7 @@ def graph(coords: list, algorithm: str = None):
     '''
     coords = name_coords(coords)
     graphs = defaultdict(list)
-    edges = dict
+    edges = {}
 
     for current in coords:
         for comparer in coords:

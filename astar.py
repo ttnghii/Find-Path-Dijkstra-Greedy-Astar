@@ -29,8 +29,8 @@ def a_star_path(
             total_path.reverse()
             return total_path, f[current]
 
-        open.remove(current)
         close.add(current)
+        open.remove(current)
 
         for neighbor in graph[current]:
 

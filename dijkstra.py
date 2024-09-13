@@ -1,4 +1,4 @@
-def dijkstra_path(nodes: list, edges: dict, start: list) -> tuple:
+def dijkstra_path(coords: dict, edges: dict, start: list) -> tuple:
     
     '''
     Returns a path to all nodes with least weight 
@@ -8,7 +8,7 @@ def dijkstra_path(nodes: list, edges: dict, start: list) -> tuple:
     neighbor, total_weight = 0, 0
     current_node = start
     visited = [start]
-    unvisited = [node[2] for node in nodes if node[2] != start]
+    unvisited = [node[2] for node in coords if node[2] != start]
 
     while unvisited:
         for index, neighbor in enumerate(unvisited):
@@ -18,8 +18,8 @@ def dijkstra_path(nodes: list, edges: dict, start: list) -> tuple:
             elif edges[start, neighbor] < current_weight:
                 current_weight = edges[start, neighbor]
                 current_node = neighbor
-            total_weight += current_weight
-            unvisited.remove(current_node)
-            visited.append(current_node)
+        total_weight += current_weight
+        visited.append(current_node)
+        unvisited.remove(current_node)
 
     return visited, total_weight
