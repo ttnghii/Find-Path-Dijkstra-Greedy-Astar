@@ -18,6 +18,8 @@ GPS = [
     [10.875658, 106.799184], # 10: HCMUS 2
 ]
 
+link = ["www.google.com.br/maps/dir/"]
+
 
 def shortest_path(algorithm: str, coords: dict, edges: dict) -> None:
 
@@ -82,13 +84,18 @@ if __name__ == '__main__':
     coords = GPS
     edges = graph(coords=coords)
 
+    label = ['HCMUS 1', 'RMIT', 'USSH', 'VLU', 'FTU2',
+             'HCMUTE', 'HCMUT', 'UEH', 'UFM', 'HCMUS 2']
+    
+    [print(f'Label {i + 1}: {label[i]}') for i in range(len(coords))]
+
     # # Dijkstra
     # shortest_path('dijkstra', coords, edges)
 
     # # Greedy
     # shortest_path('greedy', coords, edges)
 
-    # Astar
-    graphs, edges = graph(coords=coords,
-                          algorithm='astar')
-    shortest_path_astar(coords, graphs, edges)
+    # # Astar
+    # graphs, edges = graph(coords=coords,
+    #                       algorithm='astar')
+    # shortest_path_astar(coords, graphs, edges)
