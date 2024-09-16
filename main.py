@@ -21,59 +21,8 @@ GPS = [
 link = ["www.google.com.br/maps/dir/"]
 
 
-def shortest_path(algorithm: str, coords: dict, edges: dict) -> None:
-
-    shortest_path_taken = list
-    shortest_path_weight = float('inf')
-
-    for _, node in enumerate(coords):
-        if algorithm == 'dijkstra':
-            path, weight = dijkstra_path(coords, edges, node[2])
-        elif algorithm == 'greedy':
-            path, weight = greedy_path(coords, edges, node[2])
-   
-        if weight < shortest_path_weight:
-            shortest_path_weight = weight
-            shortest_path_taken = path
-
-    print('-' * 10, algorithm, '-' * 10)
-    print(f'Optimize path by using {algorithm}: {shortest_path_taken}')
-    print(f'Weight: {shortest_path_weight:.4f}')
 
 
-def shortest_path_astar(
-        coords: dict, 
-        graph: dict, 
-        edges: dict
-    ) -> None:
-
-    shortest_path_taken, shortest_path_weight = None, float('inf')
-    nodes = [node[2] for node in coords]
-
-    for perm in itertools.permutations(nodes):
-        current_path, current_weight = [], 0
-        valid_path = True
-
-        for i in range(len(perm) - 1):
-            path, weight = a_star_path(
-                coords=coords,
-                graph=graph,
-                edges=edges,
-                start=perm[i],
-                goal=perm[i + 1]
-            )
-            if path is None:
-                valid_path = False
-                break
-            current_path.extend(path[:-1])
-            current_weight += weight
-
-        if valid_path:
-            current_path.append(perm[-1])
-
-        if valid_path and current_weight < shortest_path_weight:
-            shortest_path_weight = current_weight
-            shortest_path_taken = current_path
 
     print('-' * 10, 'astar', '-' * 10)
     print(f'Optimize path by using astar: {shortest_path_taken}')
