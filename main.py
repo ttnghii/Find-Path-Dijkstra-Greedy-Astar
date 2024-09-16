@@ -1,8 +1,5 @@
 from utils import graph
-from dijkstra import dijkstra_path
-from greedy import greedy_path
-from astar import a_star_path
-import itertools
+from model import make_directory, shortest_path, shortest_path_astar, display
 
 
 GPS = [
@@ -18,33 +15,27 @@ GPS = [
     [10.875658, 106.799184], # 10: HCMUS 2
 ]
 
+label = ['HCMUS 1', 'RMIT', 'USSH', 'VLU', 'FTU2',
+         'HCMUTE', 'HCMUT', 'UEH', 'UFM', 'HCMUS 2']
+
 link = ["www.google.com.br/maps/dir/"]
-
-
-
-
-
-    print('-' * 10, 'astar', '-' * 10)
-    print(f'Optimize path by using astar: {shortest_path_taken}')
-    print(f'Weight: {shortest_path_weight:.4f}')
 
 
 if __name__ == '__main__':
     coords = GPS
     edges = graph(coords=coords)
-
-    label = ['HCMUS 1', 'RMIT', 'USSH', 'VLU', 'FTU2',
-             'HCMUTE', 'HCMUT', 'UEH', 'UFM', 'HCMUS 2']
+    graph_a, edges_a = graph(coords=coords, algorithm='astar')
     
     [print(f'Label {i + 1}: {label[i]}') for i in range(len(coords))]
 
-    # Dijkstra
-    shortest_path('dijkstra', coords, edges)
+    dijkstra_path, dijkstra_weight = shortest_path('dijkstra', coords, edges)
+    greedy_path, greedy_weight = shortest_path('greedy', coords, edges)
+    astar_path, astar_weight = shortest_path_astar(coords, graph_a, edges_a)
 
-    # # Greedy
-    # shortest_path('greedy', coords, edges)
+    dijkstra_link = make_directory(link, dijkstra_path, GPS)
+    greedy_link = make_directory(link, greedy_path, GPS)
+    astar_link = make_directory(link, astar_path, GPS)
 
-    # # Astar
-    # graphs, edges = graph(coords=coords,
-    #                       algorithm='astar')
-    # shortest_path_astar(coords, graphs, edges)
+    display(dijkstra_path, dijkstra_weight, dijkstra_link, 'dijkstra')
+    display(greedy_path, greedy_weight, greedy_link, 'greedy')
+    display(astar_path, astar_weight, astar_link, 'astar')
