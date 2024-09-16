@@ -56,6 +56,4 @@ def graph(coords: dict, algorithm: str = None):
     
 
 def heuristic(node1: list, node2: list) -> float:
-    x1, y1 = node1[:2]
-    x2, y2 = node2[:2]
-    return distance_between_coords(x1, x2, y1, y2)
+    return distance_between_coords(node1, node2)

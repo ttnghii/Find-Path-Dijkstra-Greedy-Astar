@@ -88,7 +88,7 @@ if __name__ == '__main__':
     # Greedy
     shortest_path('greedy', coords, edges)
 
-    # Astar
-    graphs, edges = graph(coords=coords,
-                          algorithm='astar')
-    shortest_path_astar(coords, graphs, edges)
+    # # Astar
+    # graphs, edges = graph(coords=coords,
+    #                       algorithm='astar')
+    # shortest_path_astar(coords, graphs, edges)
