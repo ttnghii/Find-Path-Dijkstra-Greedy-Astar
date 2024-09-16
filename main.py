@@ -82,13 +82,13 @@ if __name__ == '__main__':
     coords = GPS
     edges = graph(coords=coords)
 
-    # Dijkstra
-    shortest_path('dijkstra', coords, edges)
+    # # Dijkstra
+    # shortest_path('dijkstra', coords, edges)
 
-    # Greedy
-    shortest_path('greedy', coords, edges)
+    # # Greedy
+    # shortest_path('greedy', coords, edges)
 
-    # # Astar
-    # graphs, edges = graph(coords=coords,
-    #                       algorithm='astar')
-    # shortest_path_astar(coords, graphs, edges)
+    # Astar
+    graphs, edges = graph(coords=coords,
+                          algorithm='astar')
+    shortest_path_astar(coords, graphs, edges)

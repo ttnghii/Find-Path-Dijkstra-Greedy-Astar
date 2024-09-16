@@ -44,8 +44,7 @@ def graph(coords: dict, algorithm: str = None):
             if comparer == current:
                 continue
             else:
-                weight = distance_between_coords(current[0], current[1],
-                                                 comparer[0], comparer[1])
+                weight = distance_between_coords(current, comparer)
                 graphs[current[2]].append(comparer[2]) 
                 edges[current[2], comparer[2]] = weight 
     
