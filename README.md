@@ -19,7 +19,6 @@ Our route include:
 10. HCMUS 2: Ho Chi Minh University of Science, Vietnamese National University (Thu Duc district).
 
 <br>
-<br>
 
 <h2><b>| Result</b></h2>
 
