@@ -89,8 +89,8 @@ if __name__ == '__main__':
     
     [print(f'Label {i + 1}: {label[i]}') for i in range(len(coords))]
 
-    # # Dijkstra
-    # shortest_path('dijkstra', coords, edges)
+    # Dijkstra
+    shortest_path('dijkstra', coords, edges)
 
     # # Greedy
     # shortest_path('greedy', coords, edges)

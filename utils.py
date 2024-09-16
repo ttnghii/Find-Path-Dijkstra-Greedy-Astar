@@ -56,3 +56,16 @@ def graph(coords: dict, algorithm: str = None):
 
 def heuristic(node1: list, node2: list) -> float:
     return distance_between_coords(node1, node2)
+
+
+def make_directory(link: list, final_path: list, GPS: list) -> list:
+    for i in final_path:
+        i -= 1
+        link.append(str(GPS[i]) + '/')
+
+    final_link = listToString(link)
+    remove = ['[', ' ', ']']
+    
+    [final_link.replace(i, '') for i in remove]
+
+    return final_link
