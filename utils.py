@@ -3,7 +3,7 @@ from math import sqrt
 
 
 def listToString(s: list) -> str:
-    return ' '.join(s)
+    return " ".join(s)
 
 
 def heuristic(node1: list, node2: list) -> float:
