@@ -91,6 +91,4 @@ if __name__ == '__main__':
     # Astar
     graphs, edges = graph(coords=coords,
                           algorithm='astar')
-    shortest_path_astar(coords=coords,
-                        graph=graphs,
-                        edges=edges)
+    shortest_path_astar(coords, graphs, edges)
