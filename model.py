@@ -77,12 +77,13 @@ def shortest_path_astar(
 def make_directory(link: list, final_path: list, GPS: list) -> list:
     for i in final_path:
         i -= 1
-        link.append(str(GPS[i]) + '/')
+        link.append(str(GPS[i]) + "/")
 
     final_link = listToString(link)
-    remove = ['[', ' ', ']']
+    remove = ["[", " ", "]"]
     
-    [final_link.replace(i, '') for i in remove]
+    for i in remove:
+        final_link = final_link.replace(i,"")
 
     return final_link
 
