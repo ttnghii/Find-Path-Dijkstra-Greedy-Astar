@@ -22,18 +22,18 @@ link = ["www.google.com.br/maps/dir/"]
 if __name__ == '__main__':
     coords = GPS
     
-#     # Dijkstra
-#     link = ["www.google.com.br/maps/dir/"]
-#     edges = graph(coords=coords)
-#     dijkstra_path, dijkstra_weight = shortest_path('dijkstra', coords, edges)
-#     dijkstra_link = make_directory(link, dijkstra_path, GPS)
-#     display(dijkstra_path, dijkstra_weight, dijkstra_link, 'dijkstra')
+    # Dijkstra
+    link = ["www.google.com.br/maps/dir/"]
+    edges = graph(coords=coords)
+    dijkstra_path, dijkstra_weight = shortest_path('dijkstra', coords, edges)
+    dijkstra_link = make_directory(link, dijkstra_path, GPS)
+    display(dijkstra_path, dijkstra_weight, dijkstra_link, 'dijkstra')
 
-#     # Greedy
-#     link = ["www.google.com.br/maps/dir/"]
-#     greedy_path, greedy_weight = shortest_path('greedy', coords, edges)
-#     greedy_link = make_directory(link, greedy_path, GPS)
-#     display(greedy_path, greedy_weight, greedy_link, 'greedy')
+    # Greedy
+    link = ["www.google.com.br/maps/dir/"]
+    greedy_path, greedy_weight = shortest_path('greedy', coords, edges)
+    greedy_link = make_directory(link, greedy_path, GPS)
+    display(greedy_path, greedy_weight, greedy_link, 'greedy')
     
     # Astar
     link = ["www.google.com.br/maps/dir/"]
