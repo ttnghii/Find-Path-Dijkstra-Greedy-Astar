@@ -1,6 +1,6 @@
 # Find-Path-Dijkstra-Greedy-Astar
 
-<h3><b>| Summary</b></h3>
+<h2><b>| Summary</b></h2>
 This is my team's final mini project for a course in my university HCMUS - Vietnamese National University of Science. Our aim is find the most optimal route in terms of time when traveling the entire route to visit some universities in Hồ Chí Minh city, Việt Nam by using three algorithm, such as Dijkstra, Greedy and Astar. Finally, we compare the result of them.
 
 <br>
@@ -18,7 +18,7 @@ Our route include:
 10. HCMUS 2: Ho Chi Minh University of Science, Vietnamese National University (Thu Duc district).
 
 
-<h3><b>| Result</b></h3>
+<h2><b>| Result</b></h2>
 
 <b>Dijkstra algorithm:</b>
 
