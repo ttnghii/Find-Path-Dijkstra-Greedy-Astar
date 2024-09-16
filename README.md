@@ -4,6 +4,7 @@
 This is my team's final mini project for a course in my university HCMUS - Vietnamese National University of Science. Our aim is find the most optimal route in terms of time when traveling the entire route to visit some universities in Hồ Chí Minh city, Việt Nam by using three algorithm, such as Dijkstra, Greedy and Astar. Finally, we compare the result of them.
 
 <br>
+<br>
 
 Our route include:
 1. HCMUS 1: Ho Chi Minh University of Science, Vietnamese National University (district 5).
@@ -12,11 +13,13 @@ Our route include:
 4. VLU: Van Lang University.
 5. FTU2: Ho Chi Minh Foreign Trade University.
 6. HCMUTE: Ho Chi Minh University of Technology and Education.
-7. HCMUT: Vietnam People's Police University.
+7. VPPU: Vietnam People's Police University.
 8. UEH: Ho Chi Minh University of Economics.
 9. UAH: Ho Chi Minh University of Architecture.
 10. HCMUS 2: Ho Chi Minh University of Science, Vietnamese National University (Thu Duc district).
 
+<br>
+<br>
 
 <h2><b>| Result</b></h2>
 
